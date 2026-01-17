@@ -1,5 +1,7 @@
 // src/components/layout/Footer.tsx
 import { Link } from 'react-router-dom';
+import logo from '../images/logo.png'
+
 
 export default function Footer() {
   return (
@@ -8,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-heading text-2xl font-bold mb-4">BITSI</h3>
+            <h3 className="font-heading text-2xl font-bold mb-4"><img src={logo} alt="BITSI Logo" className="inline-block h-8 w-auto mr-2" /></h3>
             <p className="font-paragraph text-sm text-light-gray/70">
               Next-generation enterprise IT solutions for modern businesses.
             </p>

@@ -4,47 +4,95 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { Target, Eye, Heart, TrendingUp, X, Linkedin } from 'lucide-react';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
+import bimal from '../member/bimal.jpg';
+import udaya from '../member/udaya.jpg';
+import sandesh from '../member/sandesh.jpg';
+import sanjit from '../member/sanjit.jpg';
+import director from '../member/Mangeing director.jpg';
+import umesh from '../member/umeshsubedi.jpg';
+import ram from '../member/ram.jpg';
+import kedar from '../member/kedar.jpg';
 
+
+ 
 
 // Inline mock data - replace with your actual team data
 const TEAM_DATA = [
   {
-    _id: '1',
-    fullName: 'Premhari Parajuli',
-    role: 'Executive Director',
-    photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
-    bio: 'Sarah brings over 20 years of technology leadership experience to TechVision. Before joining as CEO, she led digital transformation initiatives at Fortune 500 companies and has a proven track record of scaling businesses through innovation and strategic partnerships.',
-    linkedinProfile: 'https://linkedin.com/in/sarahjohnson',
-    displayOrder: 1
-  },
+  _id: '1',
+  fullName: 'Premhari Parajuli',
+  role: 'Executive Director',
+  photo: director,
+  bio: 'Premhari Parajuli is the Founder and Executive Director of the company. He established the organization with a focus on delivering professional, technology-driven solutions and sustainable business growth. He leads corporate strategy, operations, and client engagement, ensuring high standards of service, governance, and innovation. Under his leadership, the company has developed a strong reputation for reliability, ethical practices, and long-term value creation.',
+  displayOrder: 1
+}
+,
+
   {
     _id: '2',
     fullName: 'Udayaraj Subedi',
     role: 'Senior Software Engineer',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-    bio: 'Michael is a visionary technologist with expertise in cloud architecture, AI/ML, and enterprise systems. He has architected solutions for some of the world\'s most demanding technology challenges and holds multiple patents in distributed computing.',
-    linkedinProfile: 'https://linkedin.com/in/michaelchen',
+    photo: udaya,
+    bio: 'Udayaraj Subedi is a core technical pillar of our organization and a highly respected member of the team. He leads the development of modern software solutions with dedication and creativity. His deep knowledge of technology, problem-solving ability, and mentoring spirit have greatly strengthened our engineering culture. He is committed to delivering secure, scalable, and innovative systems that bring real value to our clients.',
     displayOrder: 2
   },
+
   {
     _id: '3',
-    fullName: 'Abhishekh Sigdel',
+    fullName: 'Sanjit Pandit',
     role: 'Software Engineer',
-    photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
-    bio: 'Emily leads our engineering teams with a focus on innovation, quality, and team development. She has built and scaled engineering organizations from the ground up and is passionate about fostering inclusive, high-performing teams.',
-    linkedinProfile: 'https://linkedin.com/in/emilyrodriguez',
+    photo: sanjit,
+    bio: 'Sanjit Pandit is an important and energetic member of our technical team. His passion for coding and learning new technologies helps our organization stay updated and competitive. He works sincerely to build reliable applications and always supports his colleagues with a positive attitude. His contribution plays a meaningful role in shaping quality digital products for our clients.',
     displayOrder: 3
   },
+
   {
     _id: '4',
+    fullName: 'Sandesh Sapkota',
+    role: 'Project Manager',
+    photo: sandesh,
+    bio: 'Sandesh Sapkota is a trusted leader in managing our projects and teams. He is valued for his communication skills, responsibility, and ability to bring people together. Sandesh ensures that every project is planned carefully, executed professionally, and delivered on time. His dedication helps maintain strong relationships between the company, clients, and technical teams.',
+    displayOrder: 4
+  },
+
+  {
+    _id: '5',
     fullName: 'Umesh Subedi',
     role: 'Accountant',
-    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-    bio: 'David brings deep financial expertise and strategic thinking to TechVision. His experience spans both startups and established enterprises, helping companies optimize their financial operations and achieve sustainable growth.',
-    linkedinProfile: 'https://linkedin.com/in/davidkim',
-    displayOrder: 4
+    photo: umesh,
+    bio: 'Umesh Subedi is a reliable and valuable member who manages the financial backbone of our organization. His careful handling of accounts, budgeting, and financial planning supports the stability and growth of the company. He is known for his honesty, accuracy, and disciplined approach to financial management.',
+    displayOrder: 5
+  },
+
+  {
+    _id: '6',
+    fullName: 'Bimal Pun',
+    role: 'Technician',
+    photo: bimal,
+    bio: 'Bimal Pun is a dedicated technician and an essential part of our operational team. His practical skills and commitment ensure that all technical systems function smoothly. He responds quickly to challenges and is always ready to support clients and colleagues with patience and professionalism.',
+    displayOrder: 6
+  },
+
+  {
+    _id: '7',
+    fullName: 'Ramkumar Adhikari',
+    role: 'Technician',
+    photo: ram,
+    bio: 'Ramkumar Adhikari is a hardworking and valued technician in our organization. His hands-on experience and problem-solving mindset help maintain dependable services. He is respected for his supportive nature and willingness to go the extra mile to meet organizational and client needs.',
+    displayOrder: 7
+  },
+
+  {
+    _id: '8',
+    fullName: 'Kedar Pyakurel',
+    role: 'Technician',
+    photo: kedar,
+    bio: 'Kedar Pyakurel is a sincere and committed member of our technical workforce. His contribution in installation, maintenance, and field support is highly appreciated. He represents the company’s values through his responsible work ethic and dedication to service excellence.',
+    displayOrder: 8
   }
 ];
+
+
 
 export default function AboutPage() {
   const { memberId } = useParams();
@@ -293,7 +341,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="font-paragraph font-[500] text-base text-secondary">
-                  Today, BITSI Network continues to serve clients from Bafal, Kathmandu, and beyond with a commitment to quality and trust.
+                  Today, BITSI Network continues to serve clients from Kalanki, Kathmandu, and beyond with a commitment to quality and trust.
                 </p>
               </div>
 
@@ -303,7 +351,7 @@ export default function AboutPage() {
 
 
 
-        {/* <section className="py-32 bg-gradient-to-b from-white to-light-gray/20 relative overflow-hidden">
+        <section className="py-32 bg-gradient-to-b from-white to-light-gray/20 relative overflow-hidden">
            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-soft-gold/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
@@ -414,7 +462,7 @@ export default function AboutPage() {
               </Link>
             </motion.div>
           </div>
-        </section>*/}
+        </section>
         
         {/* Member Detail Modal */}
         <AnimatePresence>

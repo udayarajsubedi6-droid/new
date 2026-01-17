@@ -148,7 +148,7 @@ const lightGreenTheme = `
                   Contact Information
                 </h2>
                 <p className="font-paragraph font-[500] text-base text-secondary/80 mb-12">
-                  Reach out to us through any of the following channels, or fill out the form and we'll get back to you within 24 hours.
+                  Reach out to us through any of the following channels, or fill out the form and we'll get back to you soon.
                 </p>
 
                 <div className="space-y-8">
@@ -199,7 +199,7 @@ const lightGreenTheme = `
                         Office
                       </h3>
                       <p className="font-paragraph text-sm text-secondary">
-                        Bafal, Kathmandu<br />
+                        Kalanki, Kathmandu<br />
                         Nepal
                       </p>
                     </div>

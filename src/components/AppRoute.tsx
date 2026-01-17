@@ -26,6 +26,10 @@ const router = createHashRouter([
       { path: "services", element: <ServicesPage /> },
       { path: "careers", element: <CareersPage /> },
       { path: "contact", element: <ContactPage /> },
+      {path:"services/:serviceId", element: <ServicesPage /> },
+      {path:"careers/:careerId", element: <CareersPage /> },
+      {path:"about/:id", element: <AboutPage /> },
+
     ],
   },
 ]);

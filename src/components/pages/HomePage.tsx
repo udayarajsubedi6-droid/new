@@ -311,9 +311,31 @@ export default function HomePage() {
               <p className="font-paragraph text-sm text-secondary uppercase tracking-widest text-center">Trusted by </p>
             </div>
             <div className="relative flex overflow-x-hidden group">
-              <div className="animate-marquee whitespace-nowrap flex items-center gap-16 md:gap-32 px-8">
+             <div className="animate-marquee whitespace-nowrap flex items-center gap-24 md:gap-40 px-8">
+  {[...clientLogos, ...clientLogos].map((client, index) => (
+    <div
+      key={`${client._id}-${index}`}
+      className="flex-shrink-0 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500
+                 px-6 min-w-[160px] flex justify-center"
+    >
+      {client.logo && (
+        <img
+          src={client.logo}
+          alt={client.clientName}
+          className="h-12 w-auto object-contain"
+        />
+      )}
+    </div>
+  ))}
+</div>
+
+              <div className="animate-marquee whitespace-nowrap flex items-center gap-24 md:gap-40 px-8">
                 {[...clientLogos, ...clientLogos].map((client, index) => (
-                  <div key={`${client._id}-${index}`} className="flex-shrink-0 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                  <div
+                    key={`${client._id}-${index}`}
+                    className="flex-shrink-0 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500
+                 px-6 min-w-[160px] flex justify-center"
+                  >
                     {client.logo && (
                       <img
                         src={client.logo}
@@ -324,19 +346,7 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center gap-16 md:gap-32 px-8">
-                {[...clientLogos, ...clientLogos].map((client, index) => (
-                  <div key={`${client._id}-dup-${index}`} className="flex-shrink-0 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
-                    {client.logo && (
-                      <img
-                        src={client.logo}
-                        alt={client.clientName}
-                        className="h-12 w-auto object-contain"
-                      />
-                    )}
-                  </div>
-                ))}
-              </div>
+
             </div>
           </section>
         )}
@@ -347,9 +357,9 @@ export default function HomePage() {
             <StickySection title="The BITSI Standard">
               <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
                 {[{ icon: Shield, title: 'Reliable Solutions', description: 'We build stable and dependable systems that work smoothly for your business every day.' },
-{ icon: Zap, title: 'Fast Delivery', description: 'Quick turnaround times without compromising quality. Get your project done on schedule.' },
-{ icon: Users, title: 'Expert Support', description: 'Our experienced team is here to help you from start to finish and beyond.' },
-{ icon: Award, title: 'Affordable Pricing', description: 'Quality IT services at prices that make sense for small and medium businesses.' },
+                { icon: Zap, title: 'Fast Delivery', description: 'Quick turnaround times without compromising quality. Get your project done on schedule.' },
+                { icon: Users, title: 'Expert Support', description: 'Our experienced team is here to help you from start to finish and beyond.' },
+                { icon: Award, title: 'Affordable Pricing', description: 'Quality IT services at prices that make sense for small and medium businesses.' },
                 ].map((item, index) => {
                   const Icon = item.icon;
                   return (
